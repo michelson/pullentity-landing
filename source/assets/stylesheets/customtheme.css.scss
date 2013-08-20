@@ -18,14 +18,14 @@ h2{
 
 .container-narrow {
   margin: 0 auto;
-  max-width: 760px;
+  max-width: 920px;
 }
 
 #content{
   margin:0px !important;
   margin:16px 0 50px 260px;
   position: relative;
-  width: 750px;
+  text-align: center;
 
   h2 {
     font-family: "Helvetica Neue",Helvetica,"pragmatica-web",Arial,sans-serif;
@@ -38,24 +38,26 @@ h2{
 
   p{
     font-family: Georgia,Times,"Times New Roman",serif;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
-    line-height: 39px;
+    line-height: 1.4;
     margin-bottom: 40px;
+    color: #777;
   }
 }
 
 .jumbotron {
-    background: url("http://farm9.staticflickr.com/8108/8555917992_b9f158b822_b.jpg") no-repeat scroll 76px -92px transparent;
+    background: url("http://farm9.staticflickr.com/8108/8555917992_b9f158b822_b.jpg") no-repeat scroll center -100px transparent;
     padding-top: 338px;
     margin-top: 20px;
     position: relative;
     text-align: center;
-    width: 97%;
   h1 {
-    font-size: 124px;
+    font-size: 74px;
     line-height: 0.8;
     padding: 11px;
+    margin: 80px 0 30px;
+
   }
   .lead {
     font-size: 39px !important;
@@ -68,8 +70,8 @@ h2{
 }
 
 h4.title{
-  font-size: 26px;
-  font-weight: 700;  
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .thumbnail, .img-thumbnail {
