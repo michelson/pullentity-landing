@@ -1,0 +1,20 @@
+<div class='col-12'>
+  <h2>{{title}}</h2>
+</div>
+<div class='myCarousel carousel slide'>
+  <div class='carousel-inner'>
+    {{#each photos}}
+    <div class='item'>
+      <img alt='' src='{{img_large}}'>
+      <div class='carousel-caption'>
+        <h4>{{title}}</h4>
+        <p>{{caption}}</p>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  <a class='left carousel-control' data-slide='prev' href='.myCarousel'>‹</a>
+  <a class='right carousel-control' data-slide='next' href='.myCarousel'>›</a>
+</div>
+<p>{{{body}}}</p>
+{{{fb_comments}}}

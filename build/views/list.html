@@ -1,0 +1,21 @@
+<div class='col-12'>
+  <h2>{{section.title}}</h2>
+</div>
+<div class='row'>
+  <div class='thumbnails'>
+    {{#each projects}}
+    <div class='col-12'>
+      <div class='thumbnail'>
+        <a href='{{ProjectUrl this}}'>
+          <img alt='{{title}}' class='img-responsive' src="{{ProjectImg 'xlarge'}}">
+        </a>
+        <div class='caption'>
+          <h5>
+            <a class='pjax' href='{{ProjectUrl this}}'>{{ title }}</a>
+          </h5>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>

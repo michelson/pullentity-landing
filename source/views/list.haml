@@ -1,0 +1,15 @@
+.col-12
+  %h2 {{section.title}}
+
+.row
+  .thumbnails
+    {{#each projects}}
+    .col-12
+      .thumbnail
+        %a{ :href=> "{{ProjectUrl this}}" }
+          %img.img-responsive{ :alt => "{{title}}", :src => "{{ProjectImg 'xlarge'}}" }
+        .caption
+          %h5
+            %a.pjax{:href => "{{ProjectUrl this}}"} {{ title }}
+
+    {{/each}}

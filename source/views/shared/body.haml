@@ -1,0 +1,27 @@
+%script{ type: "text/x-handlebars-template", id: "layout"}
+
+  .container-narrow
+    .masthead
+      %ul.nav.nav-pills.pull-right
+        {{#sections}}
+        {{#show_in_menu}}
+        %li
+          %a{:href => "{{SectionUrl this}}"} {{title}}
+        {{/show_in_menu}}
+        {{/sections}}
+        %li
+          %a{:href => "http://pullentity.com/users/sign_in"} Sign in
+      %h3.muted
+        %a.pjax{:href => "/"} PullEntity
+
+    / %a.pjax{:href => "{{site_link}}"}{{site.name}}
+    #content.row-fluid
+      / Don't remove this line
+      {{{content}}}
+      {{{loader}}}
+    {{{facebook_comments}}}
+
+    .footer.col-12
+      %p made with pullentity, illustration by derios
+
+  {{{facebook_comments}}}

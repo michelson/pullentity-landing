@@ -1,0 +1,32 @@
+<script id='layout' type='text/x-handlebars-template'>
+  <div class='container-narrow'>
+    <div class='masthead'>
+      <ul class='nav nav-pills pull-right'>
+        {{#sections}}
+        {{#show_in_menu}}
+        <li>
+          <a href='{{SectionUrl this}}'>{{title}}</a>
+        </li>
+        {{/show_in_menu}}
+        {{/sections}}
+        <li>
+          <a href='http://pullentity.com/users/sign_in'>Sign in</a>
+        </li>
+      </ul>
+      <h3 class='muted'>
+        <a class='pjax' href='/'>PullEntity</a>
+      </h3>
+    </div>
+    <!-- %a.pjax{:href => "{{site_link}}"}{{site.name}} -->
+    <div class='row-fluid' id='content'>
+      <!-- Don't remove this line -->
+      {{{content}}}
+      {{{loader}}}
+    </div>
+    {{{facebook_comments}}}
+    <div class='footer col-12'>
+      <p>made with pullentity, illustration by derios</p>
+    </div>
+  </div>
+  {{{facebook_comments}}}
+</script>

@@ -1,0 +1,11 @@
+%title Pullentity Site
+%meta{:content => "", :name => "description"}
+%meta{:content => "t", :name => "keywords"}
+%meta{:content => "INDEX,FOLLOW", :name => "ROBOTS"}
+
+%script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"}
+
+= javascript_include_tag "application"
+= stylesheet_link_tag "application"
+
+= yield_content(:application_js)

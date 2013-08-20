@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <script>
+      !window.pullentity_domain ? window.pullentity_domain = "http://begin" : null
+    </script>
+    <title>Pullentity Site</title>
+    <meta content='' name='description'>
+    <meta content='t' name='keywords'>
+    <meta content='INDEX,FOLLOW' name='ROBOTS'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+    <script src='http://pullentity.s3.amazonaws.com/uploads/theme_asset/begin/theme/begin/assets/application.js' type='text/javascript'></script>
+    <link href='http://pullentity.s3.amazonaws.com/uploads/theme_asset/begin/theme/begin/assets/application.css' media='screen' rel='stylesheet' type='text/css' />
+  </head>
+  <script>
+    // put inline js here or use assets path
+    
+    $(function() {
+    
+      $('.myCarousel')
+        .livequery(function(){
+        $(this).find(".item").first().addClass('active');
+        $(this).carousel();
+      });
+    
+    });
+  </script>
+  <style>
+    /* put inline css here or use sass in assets path */
+  </style>
+  <body>
+    <script id='layout' type='text/x-handlebars-template'>
+      <div class='container-narrow'>
+        <div class='masthead'>
+          <ul class='nav nav-pills pull-right'>
+            {{#sections}}
+            {{#show_in_menu}}
+            <li>
+              <a href='{{SectionUrl this}}'>{{title}}</a>
+            </li>
+            {{/show_in_menu}}
+            {{/sections}}
+            <li>
+              <a href='http://pullentity.com/users/sign_in'>Sign in</a>
+            </li>
+          </ul>
+          <h3 class='muted'>
+            <a class='pjax' href='/'>PullEntity</a>
+          </h3>
+        </div>
+        <!-- %a.pjax{:href => "{{site_link}}"}{{site.name}} -->
+        <div class='row-fluid' id='content'>
+          <!-- Don't remove this line -->
+          {{{content}}}
+          {{{loader}}}
+        </div>
+        {{{facebook_comments}}}
+        <div class='footer col-12'>
+          <p>made with pullentity, illustration by derios</p>
+        </div>
+      </div>
+      {{{facebook_comments}}}
+    </script>
+    <script class='pullentity-themes' id='contact' type='text/x-handlebars-template'>
+      <div id='contact'>
+        <div class='col-12'>
+          <h2>{{project.title}}</h2>
+        </div>
+        <div class='span5'>
+          {{{project.body}}}
+        </div>
+        <div class='span5'>
+          <iframe frameborder='0' height='350' marginheight='0' marginwidth='0' scrolling='no' src='https://www.google.com/maps?f=q&amp;source=s_q&amp;hl=es&amp;q=Santiago,+Regi%C3%B3n+Metropolitana+de+Santiago+de+Chile,+Chile&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=35.136115,73.916016&amp;t=h&amp;ie=UTF8&amp;geocode=FUBNAf4dsxbK-w&amp;split=0&amp;hq=&amp;hnear=Santiago,+Regi%C3%B3n+Metropolitana+de+Santiago+de+Chile,+Chile&amp;z=8&amp;iwloc=A&amp;output=embed' width='425'></iframe>
+          <br>
+          <small>
+            <a href='https://www.google.com/maps?f=q&amp;source=embed&amp;hl=es&amp;q=Santiago,+Regi%C3%B3n+Metropolitana+de+Santiago+de+Chile,+Chile&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=35.136115,73.916016&amp;t=h&amp;ie=UTF8&amp;geocode=FUBNAf4dsxbK-w&amp;split=0&amp;hq=&amp;hnear=Santiago,+Regi%C3%B3n+Metropolitana+de+Santiago+de+Chile,+Chile&amp;z=8&amp;iwloc=A' style='color:#0000FF;text-align:left'>Ver mapa más grande</a>
+          </small>
+        </div>
+      </div>
+    </script>
+    <script class='pullentity-themes' id='home' type='text/x-handlebars-template'>
+      <div id='home'>
+        <div class='col-12'>
+          <h2>{{title}}</h2>
+        </div>
+        <div class='myCarousel carousel slide'>
+          <div class='carousel-inner'>
+            {{#each photos}}
+            <div class='item'>
+              <img alt='' src='{{img_large}}'>
+              <div class='carousel-caption'>
+                <h4>{{title}}</h4>
+                <p>{{caption}}</p>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+          <a class='left carousel-control' data-slide='prev' href='.myCarousel'>‹</a>
+          <a class='right carousel-control' data-slide='next' href='.myCarousel'>›</a>
+        </div>
+        <p>{{{body}}}</p>
+        {{{fb_comments}}}
+      </div>
+    </script>
+    <script class='pullentity-themes' id='landing' type='text/x-handlebars-template'>
+      <div id='landing'>
+        <div class='jumbotron'>
+          <h1>Build your site Today</h1>
+          <p class='lead'>
+            PullEntity is a site builder made by devolpers & artists for developers  and artists.
+          </p>
+          <a class='sign_up btn btn-large btn-success' href='http://pullentity.com/users/sign_up'>Sign up today</a>
+        </div>
+        <div class='row-fluid marketing'>
+          <div class='col-6'>
+            <h4 class='title'>Social Apis integration.</h4>
+            <p>Grab your social content from Facebook, Instagram, Dropbox and more!.</p>
+            <h4 class='title'>Simple, flexible & customizable.</h4>
+            <p>
+              Select the template that fit your needs and
+              modifiy it to change the aspect.
+            </p>
+          </div>
+          <div class='col-6'>
+            <h4 class='title'>Cutting edge technologies.</h4>
+            <p>Use mainstream technologies like Sass, Haml, Coffescript to build your site.</p>
+            <h4 class='title'>Work Locally, Manage in the cloud.</h4>
+            <p>Get the command line application to develop the theme in your local environment.</p>
+          </div>
+        </div>
+      </div>
+    </script>
+    <script class='pullentity-themes' id='teme1' type='text/x-handlebars-template'>
+      <div id='teme1'>
+        <div class='col-12'>
+          <h2>{{title}}</h2>
+        </div>
+        <div class='col-12'>
+          <div class='myCarousel carousel slide' id='carousel-example-generic'>
+            <div class='carousel-inner'>
+              {{#each photos}}
+              <div class='item'>
+                <img alt='' class='img-responsive' src="{{PhotoImg 'xlarge'}}">
+                <div class='carousel-caption'>
+                  <h4>{{image.title}}</h4>
+                  <p>{{image.caption}}</p>
+                </div>
+              </div>
+              {{/each}}
+            </div>
+            <a class='left carousel-control' data-slide='prev' href='.myCarousel'>
+              <span class='icon-prev'></span>
+            </a>
+            <a class='right carousel-control' data-slide='next' href='.myCarousel'>
+              <span class='icon-next'></span>
+            </a>
+          </div>
+        </div>
+        <div class='col-12'>
+          <p>{{{ body }}}</p>
+        </div>
+      </div>
+    </script>
+    <script class='pullentity-themes' id='text-only' type='text/x-handlebars-template'>
+      <div id='text-only'>
+        <div class='col-12'>
+          <h2>{{title}}</h2>
+        </div>
+        <div class='col-12'>
+          <p>
+            {{{body}}}
+          </p>
+        </div>
+        {{{fb_comments}}}
+      </div>
+    </script>
+    <script class='pullentity-themes' id='list' type='text/x-handlebars-template'>
+      <div class='col-12'>
+        <h2>{{section.title}}</h2>
+      </div>
+      <div class='row'>
+        <div class='thumbnails'>
+          {{#each projects}}
+          <div class='col-12'>
+            <div class='thumbnail'>
+              <a href='{{ProjectUrl this}}'>
+                <img alt='{{title}}' class='img-responsive' src="{{ProjectImg 'xlarge'}}">
+              </a>
+              <div class='caption'>
+                <h5>
+                  <a class='pjax' href='{{ProjectUrl this}}'>{{ title }}</a>
+                </h5>
+              </div>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </script>
+  </body>
+</html>
