@@ -11,17 +11,11 @@
         {{/sections}}
         %li
           %a{:href => "http://pullentity.com/users/sign_in"} Sign in
-      %h3.muted
-        %a.pjax{:href => "/"} PullEntity
+      %h2.muted
+        %a{:href => "/#"} PullEntity
 
-    / %a.pjax{:href => "{{site_link}}"}{{site.name}}
-    #content.row-fluid
-      / Don't remove this line
+    #content.row
       {{{content}}}
-      {{{loader}}}
-    {{{facebook_comments}}}
 
     .footer.col-12
       %p made with pullentity, illustration by derios
-
-  {{{facebook_comments}}}

@@ -7,13 +7,37 @@
 $break-small: 600px;
 $break-large: 1200px;
 
+$serif: "freight-sans-pro",sans-serif;
+$georgia: "ff-tisa-web-pro",Georgia,Cambria,"Times New Roman",Times,serif;
+
+
+a{
+  outline: medium none !important;
+}
+
 body{
+  font-family: $georgia;
   // background: image-url("p5.png") repeat scroll 0 0 #F4F4F4;
+}
+
+h1, h2, h3, h4{
+  font-family: $serif;
 }
 
 h2{
   /*font-family: "Oxygen", Helvetica, Arial;*/
+  font-family: $serif;
   font-size: 22.5px;
+}
+
+.nav{
+  font-family: $serif;
+}
+
+.masthead{
+  h2{
+    font-weight: bold;
+  }    
 }
 
 .container-narrow {
@@ -28,7 +52,8 @@ h2{
   text-align: center;
 
   h2 {
-    font-family: "Helvetica Neue",Helvetica,"pragmatica-web",Arial,sans-serif;
+    font-family: $serif;
+    //font-family: "Helvetica Neue",Helvetica,"pragmatica-web",Arial,sans-serif;
     font-size: 57px;
     font-weight: 700;
     letter-spacing: -0.04em;
@@ -37,8 +62,9 @@ h2{
   }
 
   p{
-    font-family: Georgia,Times,"Times New Roman",serif;
-    font-size: 20px;
+    font-family: $georgia;
+    //font-family: Georgia,Times,"Times New Roman",serif;
+    font-size: 25px;
     font-weight: 400;
     line-height: 1.4;
     margin-bottom: 40px;
@@ -53,11 +79,12 @@ h2{
     position: relative;
     text-align: center;
   h1 {
-    font-size: 74px;
+    font-size: 75px;
+    font-stretch: extra-condensed;
+    font-weight: bold;
     line-height: 0.8;
+    margin: 77px 0 5px;
     padding: 11px;
-    margin: 80px 0 30px;
-
   }
   .lead {
     font-size: 39px !important;
@@ -76,12 +103,21 @@ h4.title{
 
 .thumbnail, .img-thumbnail {
   background-color: #FFFFFF;
-  border: 1px solid #DDDDDD;
+  border: 0px solid #DDDDDD;
   @include border-radius(0);
   line-height: 1.42857;
   margin-bottom: 20px;
   padding: 4px;
   transition: all 0.2s ease-in-out 0s;
+  .caption{
+    h2, h3{
+      font-family: $georgia;
+    }
+  }
+}
+
+.carousel-control.left, .carousel-control.right  {
+  background-image: none;
 }
 
 
@@ -102,8 +138,26 @@ h4.title{
    a{
     color: #888888;
     font-size: 16px;
-    font-family: "Oxygen", Helvetica, Arial;
+    font-family: $serif;
     font-weight: lighter;
+    }
+  }
+}
+
+#team{
+  .item{
+    @include border-radius(50%);
+    img{
+      border: 13px solid white;
+      @include box-shadow( 0 0 0 1px rgba(0, 0, 0, 0.04), 0 1px 5px rgba(0, 0, 0, 0.1));
+      vertical-align: middle;
+    }
+  }
+  .caption{
+    h3{
+      font-family: $georgia;
+      font-size: 35px;
+      font-weight: bold;
     }
   }
 }
