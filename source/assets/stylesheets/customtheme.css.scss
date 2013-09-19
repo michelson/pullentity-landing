@@ -7,28 +7,53 @@
 $break-small: 600px;
 $break-large: 1200px;
 
+$serif: "freight-sans-pro",sans-serif;
+$georgia: "ff-tisa-web-pro",Georgia,Cambria,"Times New Roman",Times,serif;
+
+
+a{
+  outline: medium none !important;
+}
+
 body{
+  font-family: $georgia;
   // background: image-url("p5.png") repeat scroll 0 0 #F4F4F4;
+}
+
+h1, h2, h3, h4{
+  font-family: $serif;
 }
 
 h2{
   /*font-family: "Oxygen", Helvetica, Arial;*/
+  font-family: $serif;
   font-size: 22.5px;
+}
+
+.nav{
+  font-family: $serif;
+}
+
+.masthead{
+  h2{
+    font-weight: bold;
+  }    
 }
 
 .container-narrow {
   margin: 0 auto;
-  max-width: 760px;
+  max-width: 920px;
 }
 
 #content{
   margin:0px !important;
   margin:16px 0 50px 260px;
   position: relative;
-  width: 750px;
+  text-align: center;
 
   h2 {
-    font-family: "Helvetica Neue",Helvetica,"pragmatica-web",Arial,sans-serif;
+    font-family: $serif;
+    //font-family: "Helvetica Neue",Helvetica,"pragmatica-web",Arial,sans-serif;
     font-size: 57px;
     font-weight: 700;
     letter-spacing: -0.04em;
@@ -37,24 +62,28 @@ h2{
   }
 
   p{
-    font-family: Georgia,Times,"Times New Roman",serif;
-    font-size: 22px;
+    font-family: $georgia;
+    //font-family: Georgia,Times,"Times New Roman",serif;
+    font-size: 25px;
     font-weight: 400;
-    line-height: 39px;
+    line-height: 1.4;
     margin-bottom: 40px;
+    color: #777;
   }
 }
 
 .jumbotron {
-    background: url("http://farm9.staticflickr.com/8108/8555917992_b9f158b822_b.jpg") no-repeat scroll 76px -92px transparent;
+    background: url("http://farm9.staticflickr.com/8108/8555917992_b9f158b822_b.jpg") no-repeat scroll center -100px transparent;
     padding-top: 338px;
     margin-top: 20px;
     position: relative;
     text-align: center;
-    width: 97%;
   h1 {
-    font-size: 124px;
+    font-size: 75px;
+    font-stretch: extra-condensed;
+    font-weight: bold;
     line-height: 0.8;
+    margin: 77px 0 5px;
     padding: 11px;
   }
   .lead {
@@ -68,18 +97,27 @@ h2{
 }
 
 h4.title{
-  font-size: 26px;
-  font-weight: 700;  
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .thumbnail, .img-thumbnail {
   background-color: #FFFFFF;
-  border: 1px solid #DDDDDD;
+  border: 0px solid #DDDDDD;
   @include border-radius(0);
   line-height: 1.42857;
   margin-bottom: 20px;
   padding: 4px;
   transition: all 0.2s ease-in-out 0s;
+  .caption{
+    h2, h3{
+      font-family: $georgia;
+    }
+  }
+}
+
+.carousel-control.left, .carousel-control.right  {
+  background-image: none;
 }
 
 
@@ -100,8 +138,26 @@ h4.title{
    a{
     color: #888888;
     font-size: 16px;
-    font-family: "Oxygen", Helvetica, Arial;
+    font-family: $serif;
     font-weight: lighter;
+    }
+  }
+}
+
+#team{
+  .item{
+    @include border-radius(50%);
+    img{
+      border: 13px solid white;
+      @include box-shadow( 0 0 0 1px rgba(0, 0, 0, 0.04), 0 1px 5px rgba(0, 0, 0, 0.1));
+      vertical-align: middle;
+    }
+  }
+  .caption{
+    h3{
+      font-family: $georgia;
+      font-size: 35px;
+      font-weight: bold;
     }
   }
 }
